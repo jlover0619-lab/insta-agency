@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+@keyframes scrollDot {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(10px); opacity: 0.2; }
+}
+
+.scroll-dot {
+  animation: scrollDot 1.6s ease-in-out infinite;
+}
+
+@layer utilities {
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #F0D060 0%, #D4AF37 50%, #B8962E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gold-gradient-bg {
+    background: linear-gradient(135deg, #F0D060 0%, #D4AF37 50%, #B8962E 100%);
+  }
+
+  .card-dark {
+    background: #111111;
+    border: 1px solid #222222;
+  }
+}
